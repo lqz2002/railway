@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM golang:alpine AS builder
 RUN apk update && apk add --no-cache git
 WORKDIR /go/src/xray/core
 RUN git clone --progress https://github.com/XTLS/Xray-core.git . && \
